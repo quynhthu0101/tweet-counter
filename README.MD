@@ -69,4 +69,9 @@ Ví dụ:
 
 | Lỗi | Nguyên nhân | Cách fix |
 |-----|-------------|----------|
+| `java.lang.ClassNotFoundException` | Thiếu cài đặt Java hoặc biến môi trường `JAVA_HOME` | Cài Java và cấu hình `JAVA_HOME` |
+| `pyspark not found` | Chưa cài PySpark trong Python | Cài bằng: `pip install pyspark` |
+| `nc: command not found` | Hệ thống chưa có netcat | Cài bằng: `sudo apt install netcat` (Linux) hoặc dùng bản thay thế trên Windows (ncat trong Nmap) |
+| Chương trình không in kết quả | Netcat chưa gửi dữ liệu hoặc chưa đúng port | Kiểm tra lại lệnh `nc -lk 9999` và chắc chắn đã nhập text vào terminal 1 |
+| Spark log quá nhiều | Spark mặc định log WARN/INFO nhiều | Thêm `sc.setLogLevel("ERROR")` trong code để giảm log |
 | `Exception in thread "streaming-start" java.lang.UnsatisfiedLinkError: 'boolean org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(java.lang.String, int)'` | Thiếu `hadoop.dll` trong `C:\hadoop\bin` và `C:\Windows\System32` | - Tải file từ [winutils](https://github.com/steveloughran/winutils) và copy vào 2 folder trên.<br>- Cấu hình biến môi trường (nếu chưa có):<br>```bash<br>set HADOOP_HOME=c:/hadoop<br>set PATH=%PATH%;%HADOOP_HOME%/bin;<br>``` |
