@@ -69,6 +69,6 @@ Ví dụ:
 
 | Lỗi | Nguyên nhân | Cách fix |
 |-----|-------------|----------|
-| `Exception in thread "streaming-start" java.lang.UnsatisfiedLinkError: 'boolean org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(java.lang.String, int)'` | Thiếu `hadoop.dll` trong `C:\hadoop\bin` và `C:\Windows\System32` | - Tải file từ [winutils](https://github.com/steveloughran/winutils) và copy vào 2 folder trên.<br>- Cấu hình biến môi trường (CMD - Windows):```set HADOOP_HOME=C:\hadoop   set PATH=%PATH%;%HADOOP_HOME%\bin;``` |
+| `Exception in thread "streaming-start" java.lang.UnsatisfiedLinkError: 'boolean org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(java.lang.String, int)'` | Thiếu `hadoop.dll` trong `C:\hadoop\bin` và `C:\Windows\System32` | - Tải file từ [winutils](https://github.com/steveloughran/winutils) và copy vào 2 folder trên.<br>- Cấu hình biến môi trường (chạy trong **CMD - Windows**):<br>`set HADOOP_HOME=C:\hadoop`<br>`set PATH=%PATH%;%HADOOP_HOME%\bin;` |
 
 ---
