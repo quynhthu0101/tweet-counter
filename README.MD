@@ -43,7 +43,7 @@ another tweet
 
 ### Bước 2: Mở terminal 2 → chạy chương trình Spark Streaming
 ```bash
-spark-submit TweetCountDemo.py
+python TweetCountDemo.py
 ```
 
 ### Bước 3: Quan sát kết quả in ra mỗi 10 giây
