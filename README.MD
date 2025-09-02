@@ -8,49 +8,50 @@
 
 Trước khi chạy chương trình, hãy kiểm tra các công cụ sau:
 
-# Kiểm tra Java
+### Kiểm tra Java
 java -version
 
-# Kiểm tra Spark
+### Kiểm tra Spark
 spark-shell --version
 
-# Kiểm tra Python
+### Kiểm tra Python
 python --version
 
-# Kiểm tra PySpark
+### Kiểm tra PySpark
 python -m pip show pyspark
 
-# Kiểm tra netcat
+### Kiểm tra netcat
 nc -h
 
 
-### 2. Các bước chạy chương trình
+## 2. Các bước chạy chương trình
 
-# Mở terminal 1 → chạy server netcat để phát dữ liệu:
+### Mở terminal 1 → chạy server netcat để phát dữ liệu:
 
 nc -lk 9999
 
 
-# Sau đó gõ text bất kỳ (giả lập tweet), ví dụ:
+### Sau đó gõ text bất kỳ (giả lập tweet), ví dụ:
 
 hello world
 spark streaming demo
 another tweet
 
 
-# Mở terminal 2 → chạy chương trình Spark Streaming:
+### Mở terminal 2 → chạy chương trình Spark Streaming:
 
 spark-submit TweetCountDemo.py
 
 
-# Quan sát kết quả in ra mỗi 10 giây:
+### Quan sát kết quả in ra mỗi 10 giây:
 
 ----- Time: 2025-09-02 19:00:10 -----
 5
+
 ----- Time: 2025-09-02 19:00:20 -----
 12
 
-### 3. Giải thích ngắn gọn
+## 3. Giải thích ngắn gọn
 
 Batch interval: 5 giây → gom dữ liệu mỗi 5 giây.
 
@@ -58,4 +59,4 @@ Window length: 30 giây → đếm số tweet trong 30 giây gần nhất.
 
 Slide interval: 10 giây → cập nhật kết quả sau mỗi 10 giây.
 
-### 4. Lỗi thường gặp và cách fix
+## 4. Lỗi thường gặp và cách fix
