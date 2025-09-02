@@ -46,9 +46,11 @@ spark-submit TweetCountDemo.py
 ### Quan sát kết quả in ra mỗi 10 giây:
 
 ----- Time: 2025-09-02 19:00:10 -----
+
 5
 
 ----- Time: 2025-09-02 19:00:20 -----
+
 12
 
 ## 3. Giải thích ngắn gọn
