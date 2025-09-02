@@ -69,6 +69,7 @@ Ví dụ:
 
 | Lỗi | Nguyên nhân | Cách fix |
 |-----|-------------|----------|
-| `Exception in thread "streaming-start" java.lang.UnsatisfiedLinkError: 'boolean org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(java.lang.String, int)'` | Thiếu hadoop.dll trong C:\hadoop\bin và C:\Windows\System32 | Tải và đặt vào 2 folder. https://github.com/steveloughran/winutils |
+| `Exception in thread "streaming-start" java.lang.UnsatisfiedLinkError: 'boolean org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(java.lang.String, int)'` | Thiếu hadoop.dll trong C:\hadoop\bin và C:\Windows\System32 | Tải và đặt vào 2 folder. Link tải: https://github.com/steveloughran/winutils. Cấu hình biến môi trường nếu chưa có: `set HADOOP_HOME=c:/hadoop
+set PATH=%PATH%;%HADOOP_HOME%/bin;` |
 
 ---
