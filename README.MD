@@ -22,7 +22,7 @@ python --version
 python -m pip show pyspark
 
 # Kiểm tra netcat
-nc -h
+ncat -h
 ```
 
 ---
@@ -31,7 +31,7 @@ nc -h
 
 ### Bước 1: Mở terminal 1 → chạy server netcat để phát dữ liệu
 ```bash
-nc -lk 9999
+ncat -lk 9999
 ```
 
 Sau đó gõ text bất kỳ (giả lập tweet), ví dụ:
@@ -46,13 +46,13 @@ another tweet
 spark-submit TweetCountDemo.py
 ```
 
-### Bước 3: Quan sát kết quả in ra mỗi 5 giây
+### Bước 3: Quan sát kết quả in ra mỗi 10 giây
 Ví dụ:
 ```
 ----- Time: 2025-09-02 19:00:10 -----
-3
------ Time: 2025-09-02 19:00:15 -----
-3
+5
+----- Time: 2025-09-02 19:00:20 -----
+12
 ```
 
 ---
