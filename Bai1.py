@@ -18,8 +18,8 @@ hashtags = ...
 hashtag_counts = hashtags.map(...) \
     .reduceByKeyAndWindow(lambda a, b: ...,
                           lambda a, b: ...,
-                          windowDuration=...,  # 45s window
-                          slideDuration=...)   # update mỗi 15s
+                          windowDuration=...,
+                          slideDuration=...)
 
 # Sắp xếp theo số lượng giảm dần
 sorted_counts = ...

@@ -29,21 +29,17 @@ ncat -h
 
 ## 2. Các bước chạy chương trình
 
-### Bước 1: Mở terminal 1 → chạy server netcat để phát dữ liệu
+### Bước 1: Mở terminal chạy chương trình để phát dữ liệu
 ```bash
-ncat -lk 9999
-```
-
-Sau đó gõ text bất kỳ (giả lập tweet), ví dụ:
-```
-hello world
-spark streaming demo
-another tweet
+python SendTweet.py
 ```
 
 ### Bước 2: Mở terminal 2 → chạy chương trình Spark Streaming
 ```bash
 python TweetCountDemo.py
+python HashTagCountDemo.py
+python Bai1.py
+python Bai2.py
 ```
 
 ### Bước 3: Quan sát kết quả in ra mỗi 10 giây

@@ -20,7 +20,7 @@ def contains_target_hashtag(tweet):
 # Lọc tweet có hashtag chỉ định
 filtered_tweets = ...
 
-# Áp dụng window: gom tweet trong 30s, trượt 10s
+# Áp dụng window
 windowed_tweets = filtered_tweets.window(windowDuration=..., slideDuration=...)
 
 # In ra các tweet trong cửa sổ
