@@ -14,14 +14,14 @@ target_hashtags = {"#ai", "#bigdata"}
 # Hàm kiểm tra tweet có chứa hashtag được chỉ định
 def contains_target_hashtag(tweet):
     words = tweet.split()
-    hashtags = [w.lower() for w in words if w.startswith("#")]
+    hashtags = [...]
     return any(h in target_hashtags for h in hashtags)
 
 # Lọc tweet có hashtag chỉ định
-filtered_tweets = lines.filter(contains_target_hashtag)
+filtered_tweets = ...
 
 # Áp dụng window: gom tweet trong 30s, trượt 10s
-windowed_tweets = filtered_tweets.window(windowDuration=30, slideDuration=10)
+windowed_tweets = filtered_tweets.window(windowDuration=..., slideDuration=...)
 
 # In ra các tweet trong cửa sổ
 windowed_tweets.pprint()
