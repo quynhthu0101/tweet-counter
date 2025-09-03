@@ -1,6 +1,6 @@
 # TweetCountDemo - Spark Streaming với Socket
 
-Ứng dụng này minh họa cách sử dụng **Spark Streaming** để đếm số lượng "tweet" (dòng text) trong một **cửa sổ trượt** (sliding window) từ luồng dữ liệu nhận qua **socket TCP** (sử dụng `netcat`).
+Ứng dụng này minh họa cách sử dụng **Spark Streaming** để đếm số lượng "tweet" (dòng text) trong một **cửa sổ trượt** (sliding window) từ luồng dữ liệu nhận qua **socket TCP**.
 
 ---
 
@@ -21,8 +21,6 @@ python --version
 # Kiểm tra PySpark
 python -m pip show pyspark
 
-# Kiểm tra netcat
-ncat -h
 ```
 
 ---
@@ -53,15 +51,7 @@ Ví dụ:
 
 ---
 
-## 3. Giải thích ngắn gọn
-
-- **Batch interval**: 5 giây → gom dữ liệu mỗi 5 giây.  
-- **Window length**: 30 giây → đếm số tweet trong 30 giây gần nhất.  
-- **Slide interval**: 10 giây → cập nhật kết quả sau mỗi 10 giây.  
-
----
-
-## 4. Lỗi thường gặp và cách fix
+## 3. Lỗi thường gặp và cách fix
 
 | Lỗi | Nguyên nhân | Cách fix |
 |-----|-------------|----------|
